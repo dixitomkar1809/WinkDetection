@@ -7,7 +7,7 @@ import sys
 
 def detectWink(frame, location, ROI, cascade, cascadeGlass):
     eyes = cascade.detectMultiScale(
-        ROI, 1.15, 3, 0|cv2.CASCADE_SCALE_IMAGE, (10, 20)) 
+        ROI, 1.1, 4, 0|cv2.CASCADE_SCALE_IMAGE, (10, 20)) 
     if len(eyes)>=2:
         eyes = cascadeGlass.detectMultiScale(ROI, 1.1, 4, 0|cv2.CASCADE_SCALE_IMAGE, (5, 10))
     if len(eyes)==0:
